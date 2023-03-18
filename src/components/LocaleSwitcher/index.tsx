@@ -1,22 +1,20 @@
-import Link from 'next/link'
-import { useRouter } from 'next/router'
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function LocaleSwitcher() {
-  const router = useRouter()
-  const { locales, locale: activeLocale } = router
-  console.log(router);
-
+  const router = useRouter();
+  const { locales, locale: activeLocale } = router;
 
   const otherLocales = (locales || []).filter(
     (locale) => locale !== activeLocale
-  )
+  );
 
   return (
     <div>
       <p>Locale switcher:</p>
       <ul>
         {otherLocales.map((locale) => {
-          const { pathname, query, asPath } = router
+          const { pathname, query, asPath } = router;
           return (
             <li key={locale}>
               <Link
@@ -28,9 +26,9 @@ export default function LocaleSwitcher() {
                 {locale}
               </Link>
             </li>
-          )
+          );
         })}
       </ul>
     </div>
-  )
+  );
 }

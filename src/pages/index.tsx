@@ -1,4 +1,4 @@
-import LocaleSwitcher from "@/components/LocaleSwitcher";
+import Menu from "@/components/Menu";
 import styles from "@/styles/Home.module.css";
 import { Inter } from "next/font/google";
 import Head from "next/head";
@@ -15,7 +15,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <LocaleSwitcher />
+        <Menu />
       </main>
     </>
   );
